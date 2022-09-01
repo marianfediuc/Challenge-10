@@ -1,14 +1,14 @@
-
-const generateHTML = require('./src/generateHTML');
+// link to page creation
+const generateHTML = import('./src/generateHTML');
 
 // team profiles
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern'); 
+const Manager = import('./lib/Manager');
+const Engineer = import('./lib/Engineer');
+const Intern = import('./lib/Intern'); 
 
 // node modules 
-const fs = require('fs'); 
-const  inquirer  =  require ( 'inquirer' ) ;
+const fs = import('fs'); 
+const  inquirer  =  import( 'inquirer' ) ;
 
 // team array
 const teamArray = []; 
@@ -220,4 +220,3 @@ addManager()
   .catch(err => {
  console.log(err);
   });
-
